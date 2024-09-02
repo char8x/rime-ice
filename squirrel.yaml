@@ -27,10 +27,23 @@ show_notifications_when: appropriate
 # ascii_mode、inline、no_inline、vim_mode 等等设定
 # 可参考 /Library/Input Methods/Squirrel.app/Contents/SharedSupport/squirrel.yaml
 app_options:
-  # com.apple.Spotlight:
-  #   ascii_mode: true    # 开启默认英文
-  # com.microsoft.VSCode:
-  #   ascii_mode: false   # 关闭默认英文
+  com.apple.Spotlight: # 聚焦搜索
+    ascii_mode: true # true默认英文,false默认中文
+  com.runningwithcrayons.Alfred: # alfred
+    ascii_mode: true
+  com.apple.Terminal: # 终端
+    ascii_mode: true
+  com.microsoft.VSCode: # Visual Studio Code
+    ascii_mode: true
+    ascii_punct: true # 中文状态输出英文标点(半角)
+  com.apple.dt.Xcode: # Xcode
+    ascii_mode: true
+  net.freemacsoft.AppCleaner: # App Cleaner
+    ascii_mode: true
+  com.googlecode.iterm2:
+    ascii_mode: true
+  com.Klei.Dontstarve: # 饥荒联机版
+    ascii_mode: true
 
 
 style:
