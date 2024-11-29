@@ -20,3 +20,8 @@ patch_folder:
   rsync -avzi --stats --info=progress2 lua {{rime_user_path}}
   rsync -avzi --stats --info=progress2 opencc {{rime_user_path}}
   rsync -avzi --stats --info=progress2 others {{rime_user_path}}
+  rm -rf ./cn_dicts
+  rm -rf ./en_dicts
+  rm -rf ./lua
+  rm -rf ./opencc
+  rm -rf ./others
