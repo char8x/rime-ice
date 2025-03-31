@@ -1,9 +1,11 @@
 set quiet
 
 rime_user_path := "$HOME/Library/Rime/"
+rime_sys_path := "/Library/Input Methods/Squirrel.app/Contents/SharedSupport"
 
 test_var:
   echo {{rime_user_path}}
+  echo {{rime_sys_path}}
 
 remove_git:
   rm -rf .git/
