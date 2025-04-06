@@ -12,8 +12,16 @@ remove_git:
   rm -rf .github/
 
 patch_rime:
-  mv *.yaml {{rime_user_path}}
-  mv custom_phrase.txt {{rime_user_path}}
+  #!/usr/bin/env zsh
+  if setopt -o extendedglob; then
+    # echo "EXTENDED_GLOB is enabled"
+    # Preview for moved files
+    ls -d *.yaml~(installation.yaml|squirrel.custom.yaml)
+    mv *.yaml~(installation.yaml|squirrel.custom.yaml) {{rime_user_path}}
+    mv custom_phrase.txt {{rime_user_path}}
+  else
+    echo "EXTENDED_GLOB is disabled"
+  fi
 
 patch_folder:
   rsync -avzi --stats --info=progress2 cn_dicts {{rime_user_path}}
