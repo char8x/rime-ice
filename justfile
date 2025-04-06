@@ -14,7 +14,6 @@ remove_git:
 patch_rime:
   mv *.yaml {{rime_user_path}}
   mv custom_phrase.txt {{rime_user_path}}
-  mv rime.lua {{rime_user_path}}
 
 patch_folder:
   rsync -avzi --stats --info=progress2 cn_dicts {{rime_user_path}}
