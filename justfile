@@ -17,8 +17,8 @@ patch_rime:
     # echo "EXTENDED_GLOB is enabled"
     # Preview for moved files
     ls -d *.yaml~(installation.yaml|squirrel.custom.yaml)
-    mv *.yaml~(installation.yaml|squirrel.custom.yaml) {{rime_user_path}}
-    mv custom_phrase.txt {{rime_user_path}}
+    mv -- *.yaml~(installation.yaml|squirrel.custom.yaml) {{rime_user_path}}
+    mv -- custom_phrase.txt {{rime_user_path}}
   else
     echo "EXTENDED_GLOB is disabled"
   fi
