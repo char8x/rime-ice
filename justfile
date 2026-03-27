@@ -23,7 +23,7 @@ patch_rime:
     echo "EXTENDED_GLOB is disabled"
   fi
 
-g_spare_add_folder
+g_spare_add_folder:
   git sparse-checkout add cn_dicts en_dicts lua opencc
 
 patch_folder:
