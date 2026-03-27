@@ -23,6 +23,9 @@ patch_rime:
     echo "EXTENDED_GLOB is disabled"
   fi
 
+g_spare_add_folder
+  git sparse-checkout add cn_dicts en_dicts lua opencc
+
 patch_folder:
   rsync -avzi --delete cn_dicts {{rime_user_path}}
   rsync -avzi --delete en_dicts {{rime_user_path}}
